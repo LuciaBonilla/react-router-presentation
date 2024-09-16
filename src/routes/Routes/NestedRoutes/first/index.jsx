@@ -17,7 +17,7 @@ const firstNestedView = () => (
       {definitionOfComponents}
     </SyntaxHighlighter>
 
-    <Link to='/routes/private'>
+    <Link to='/routes/private' className="button">
       Siguiente
     </Link>
   </div>

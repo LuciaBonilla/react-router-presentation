@@ -1,6 +1,5 @@
 import {
   createBrowserRouter,
-  Navigate,
 } from "react-router-dom";
 
 import App from './Home/App.jsx'
@@ -25,6 +24,10 @@ import UseNavigateExplanation from "./NavigationTypes/useNavigate/index.jsx";
 import UseLocationExplanation from "./NavigationTypes/UseLocation/index.jsx";
 
 export const BrowserRouter = createBrowserRouter([
+  {
+    path: "*",
+    element: <h1>404 personalizado</h1>
+  },
   {
     path: "/",
     element: <PrivateRoute />,
@@ -60,7 +63,7 @@ export const BrowserRouter = createBrowserRouter([
         element: <SimpleRoutes />
       },
       {
-        path: "dinamic/:id",
+        path: "dinamic/:id?",
         element: <DinamicRoutes />
       },
       {
@@ -94,28 +97,16 @@ export const BrowserRouter = createBrowserRouter([
     element: <NavigationTypes />,
     children: [
       {
-        path: 'navigate/:id',
+        path: 'navigate/:id?',
         element: <NavigateExplanation />,
       },
       {
-        path: 'navigate',
-        element: <NavigateExplanation />,
-      },
-      {
-        path: 'link',
+        path: 'link/:id?',
         element: <LinkExplanation />,
       },
       {
-        path: 'link/:id',
-        element: <LinkExplanation />,
-      },
-      {
-        path: 'navLink',
-        element: <NavLinkExplanation />,
-      },
-      {
-        path: 'navLink/:id',
-        element: <NavLinkExplanation />,
+        path: 'navLink/:id?',
+        element: <NavLinkExplanation />
       },
       {
         path: 'useNavigate',
@@ -125,23 +116,23 @@ export const BrowserRouter = createBrowserRouter([
         path: 'useLocation',
         element: <UseLocationExplanation />,
       },
-
     ]
   },
   {
-    path: 'thanks',
-    element: <h1>¡Gracias por su atención!
-      ¿Preguntas?
-    </h1>,
-
-  }, {
-
-    path: "useParams",
+    path: "useParams/:id?",
     element: <UseParams />
+  },
+  {
+    path: 'thanks',
+    element: (
+      <h1>
+        ¡Gracias por su atención!
+        ¿Preguntas?
+      </h1>
+      ),
   },
   {
     path: "useSearchParams",
     element: <UseSearchParams />
-  }
-  
+  },
 ])

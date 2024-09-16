@@ -11,6 +11,10 @@ export const simpleRoutes = `[
     path: "/howitworks",
     element: <HowItWorks />,
   },
+  {
+    path: "*",
+    element: <h1>404 personalizado</h1>
+  },
 ]`
 
 export const definitionOfDinamicRoutes =
@@ -48,7 +52,7 @@ const DinamicRoutes = () => {
 export default DinamicRoutes;`
 
 export const definitionOfNestedRoutes =
-`{
+  `{
     path: "/routes",
     element: <RoutesComponent />,
     children: [
@@ -84,7 +88,7 @@ export const definitionOfNestedRoutes =
   },`
 
 export const definitionOfComponents =
-`import { Link, Outlet } from "react-router-dom";
+  `import { Link, Outlet } from "react-router-dom";
 
 import './index.css';
 
@@ -113,7 +117,7 @@ export default NestedRoutes;
 `
 
 export const definitionOfPrivateRoute =
-`{
+  `{
     path: "/",
     element: <PrivateRoute />,
     children: [
@@ -124,7 +128,7 @@ export const definitionOfPrivateRoute =
     ]
   },`
 
-  export const definitionOfPrivateRouteComponent =
+export const definitionOfPrivateRouteComponent =
   `import { Navigate, Outlet } from "react-router-dom"
 
 const PrivateRoute = () => {
@@ -135,9 +139,9 @@ const PrivateRoute = () => {
 
 export default PrivateRoute`
 
-export const route=
+export const route =
 
-`import { useParams } from "react-router-dom";
+  `import { useParams } from "react-router-dom";
 
 function UserProfile() {
   // Extraemos el parámetro dinámico "id" de la URL
@@ -153,32 +157,28 @@ function UserProfile() {
 
 export default UserProfile;`
 
-export const routestext=
+export const routestext =
+  `import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
+const UseSearchParams = () => {
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [inputValue, setInputValue] = useState(searchParams.get('search') || '');
 
-`import { useSearchParams } from "react-router-dom";
+    const handleChange = (e) => {
+        setInputValue(e.target.value);
+        setSearchParams({ search: e.target.value });
+    }
 
-function SearchPage() {
-  // Extraemos los parámetros de búsqueda de la URL
-  const [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get("query");
+    return (
+        <div>
+            <h3>Ejemplo Basico</h3>
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const newQuery = e.target.elements.query.value;
-    setSearchParams({ query: newQuery });
-  };
+            <input type="text" value={inputValue} onChange={handleChange} />
 
-  return (
-    <div>
-      <h2>Página de búsqueda</h2>
-      <form onSubmit={handleSearch}>
-        <input type="text" name="query" defaultValue={query || ""} />
-        <button type="submit">Buscar</button>
-      </form>
-      {query && <p>Resultados de la búsqueda para: {query}</p>}
-    </div>
-  );
+            <h2>Los parametros de la URL son:</h2>
+            <p>{searchParams.get('search')}</p> // Muestra el valor del parametro search
+        </div>
+    );
 }
-
-export default SearchPage;`
+`

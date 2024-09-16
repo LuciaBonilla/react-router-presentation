@@ -13,9 +13,8 @@ const UseParams = () => {
 
     return (
         <div>
+            <h1>useParams()</h1>
             <p>El hook <code>useParams</code> Se utiliza para obtener parámetros dinámicos de la URL, como en rutas tipo /user/:id.</p>
-            <h1>Parametro id = {params.id}</h1>
-            
             <h3>Ejemplo Basico</h3>
             <SyntaxHighlighter showLineNumbers language="jsx" style={dracula}>
                 {route}

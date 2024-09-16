@@ -26,7 +26,7 @@ const LinkExplanation = () => {
             </div>
 
             <br></br>
-            <code>src/routes/Routes/DynamicRoutes/index.jsx</code>
+            <code>src/routes/Routes/navigationTypes/link/index.jsx</code>
             <SyntaxHighlighter showLineNumbers language="jsx" style={dracula}>
                 {link}
             </SyntaxHighlighter>

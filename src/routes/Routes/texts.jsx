@@ -32,7 +32,7 @@ export const definitionOfDinamicRoutes =
     element: <HowItWorks />,
   },
   {
-    path: "dinamic/:id",
+    path: "dinamic/:id?",
     element: <DinamicRoutes /> // /dinamic/1
   }
 ]`

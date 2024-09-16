@@ -42,3 +42,38 @@ export const navLink = `
 >
   Dirección 3
 </NavLink>`;
+
+export const useNavigateCode = `
+const UseNavigateExplanation = () => {
+
+    const navigate = useNavigate(); // Hook useNavigate inicializado
+
+    // Función que ejecuta la navegación
+    const goToAbout = () => {
+        navigate('/about');  // Navega a la ruta /about
+    };
+
+     return (
+        <div>
+    {/* Botón que navega a la página About */}
+            <button onClick={goToAbout} className="button">
+                Ir a la página About
+            </button>
+        </div>
+    );
+}
+`;
+
+export const useLocationCode = `
+const UseLocationExplanation = () => {
+    const location = useLocation(); 
+
+  return (
+    <div>
+      <h1>Location Page</h1>
+      <p>Estás en la ruta: {location.pathname}</p>
+      <p>Estado actual: {JSON.stringify(location.state)}</p>
+    </div>
+  );
+}
+`;

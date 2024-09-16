@@ -16,18 +16,18 @@ const NavigateExplanation = () => {
             </p>
             <h3>Dirección actual: /navigationTypes/navigate/{inputValue}</h3>
 
-            <input 
-                id="inputRouteToNavigate" 
-                type="text" 
-                placeholder="Dirección deseada" 
-                value={inputValue} 
-                onChange={(e) => setInputValue(e.target.value)} 
-                className="input" 
+            <input
+                id="inputRouteToNavigate"
+                type="text"
+                placeholder="Dirección deseada"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                className="input"
             />
             <Navigate to={`/navigationTypes/navigate/${inputValue}`} replace={true} />
 
             <br />
-            <code>src/routes/Routes/DynamicRoutes/index.jsx</code>
+            <code>src/routes/Routes/navigationTypes/navigate/index.jsx</code>
             <SyntaxHighlighter showLineNumbers language="jsx" style={dracula}>
                 {navigate}
             </SyntaxHighlighter>

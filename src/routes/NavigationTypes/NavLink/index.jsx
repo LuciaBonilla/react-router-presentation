@@ -35,7 +35,7 @@ const NavLinkExplanation = () => {
 
 
             <br></br>
-            <code>src/routes/Routes/DynamicRoutes/index.jsx</code>
+            <code>src/routes/Routes/navigationTypes/navLink/index.jsx</code>
             <SyntaxHighlighter showLineNumbers language="jsx" style={dracula}>
                 {navLink}
             </SyntaxHighlighter>

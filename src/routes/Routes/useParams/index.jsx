@@ -21,12 +21,10 @@ const UseParams = () => {
                 {route}
             </SyntaxHighlighter>
 
-            
 
-
-            <link to='../'> 
-                Regresar
-            </link>
+            <Link to='/useSearchParams' className="button"> 
+                Siguiente
+            </Link>
         </div>
     );
 }

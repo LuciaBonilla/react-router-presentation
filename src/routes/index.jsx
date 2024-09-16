@@ -85,14 +85,6 @@ export const BrowserRouter = createBrowserRouter([
         path: "private",
         element: <PrivateRouteExplanation />,
       },
-      {
-        path: "useparams",
-        element: <UseParams />
-      },
-      {
-        path: "useSearchParams",
-        element: <UseSearchParams />
-      }
     ]
   },
   {
@@ -125,5 +117,13 @@ export const BrowserRouter = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "useParams",
+    element: <UseParams />
+  },
+  {
+    path: "useSearchParams",
+    element: <UseSearchParams />
+  }
   
 ])

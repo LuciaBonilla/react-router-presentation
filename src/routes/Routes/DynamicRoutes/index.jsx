@@ -21,7 +21,7 @@ const DinamicRoutes = () => {
         {dinamicRoutes}
       </SyntaxHighlighter>
 
-      <Link to='/routes/nested'>
+      <Link to='/routes/nested' className="button">
         Siguiente
       </Link>
     </div>

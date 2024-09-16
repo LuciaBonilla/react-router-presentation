@@ -38,7 +38,7 @@ return (
             {navLink}
         </SyntaxHighlighter>
 
-        <Link to='/navigationTypes/navigate/1' className="button">
+        <Link to='/useParams' className="button">
             Siguiente
         </Link>
     </div>

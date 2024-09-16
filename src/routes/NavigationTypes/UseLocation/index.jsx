@@ -26,7 +26,7 @@ const UseLocationExplanation = () => {
             </SyntaxHighlighter>
 
             {/* Link para avanzar a la siguiente página */}
-            <Link to='/thanks' className="button">
+            <Link to='/useParams' className="button">
                 Siguiente
             </Link>
         </div>

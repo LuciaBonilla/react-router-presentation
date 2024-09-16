@@ -16,6 +16,8 @@ import FirstNestedView from "./Routes/NestedRoutes/first/index.jsx";
 import PrivateRoute from "./Routes/PrivateRoutes/index.jsx";
 import Login from "./Login/index.jsx";
 import PrivateRouteExplanation from "./Routes/PrivateRoutes/privateRouteExplanation.jsx";
+import UseParams from "./Routes/useParams/index.jsx";
+import UseSearchParams from "./Routes/UseSearchParams/index.jsx";
 import NavigateExplanation from "./NavigationTypes/Navigate/index.jsx";
 import LinkExplanation from "./NavigationTypes/Link/index.jsx";
 import NavLinkExplanation from "./NavigationTypes/NavLink/index.jsx";
@@ -82,7 +84,7 @@ export const BrowserRouter = createBrowserRouter([
       {
         path: "private",
         element: <PrivateRouteExplanation />,
-      }
+      },
     ]
   },
   {
@@ -115,5 +117,13 @@ export const BrowserRouter = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "useParams",
+    element: <UseParams />
+  },
+  {
+    path: "useSearchParams",
+    element: <UseSearchParams />
+  }
   
 ])

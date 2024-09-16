@@ -14,7 +14,7 @@ function App() {
         <Link to='/about' className='button'>Empezar</Link>
       </div>
       <div className='home--footer'>
-        Mathias Sellanes, Mauro Machado, Matias Alvez, Enzo di Sacco
+        Mathias Sellanes, Mauro Machado, Matias Alvez, Enzo Bueno
       </div>
     </div>
   )

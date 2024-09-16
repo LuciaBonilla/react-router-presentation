@@ -11,7 +11,7 @@ const SimpleRoutes = () => {
         {simpleRoutes}
       </SyntaxHighlighter>
 
-      <Link to='dinamic/1'>
+      <Link to='dinamic/1' className="button">
       Siguiente
       </Link>
     </div>

@@ -134,3 +134,51 @@ const PrivateRoute = () => {
 }
 
 export default PrivateRoute`
+
+export const route=
+
+`import { useParams } from "react-router-dom";
+
+function UserProfile() {
+  // Extraemos el parámetro dinámico "id" de la URL
+  const { id } = useParams();
+
+  return (
+    <div>
+      <h2>Perfil del usuario</h2>
+      <p>ID del usuario: {id}</p>
+    </div>
+  );
+}
+
+export default UserProfile;`
+
+export const routestext=
+
+
+`import { useSearchParams } from "react-router-dom";
+
+function SearchPage() {
+  // Extraemos los parámetros de búsqueda de la URL
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get("query");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const newQuery = e.target.elements.query.value;
+    setSearchParams({ query: newQuery });
+  };
+
+  return (
+    <div>
+      <h2>Página de búsqueda</h2>
+      <form onSubmit={handleSearch}>
+        <input type="text" name="query" defaultValue={query || ""} />
+        <button type="submit">Buscar</button>
+      </form>
+      {query && <p>Resultados de la búsqueda para: {query}</p>}
+    </div>
+  );
+}
+
+export default SearchPage;`

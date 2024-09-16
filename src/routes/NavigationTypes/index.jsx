@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const NavigationTypes = () => {
   return (
     <div>
-      asd
+      <h1> Tipos de Navegación </h1>
+      <Outlet/>
     </div>
   );
 

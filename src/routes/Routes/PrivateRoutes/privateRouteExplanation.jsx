@@ -3,7 +3,6 @@ import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { definitionOfPrivateRoute, definitionOfPrivateRouteComponent } from "../texts";
 import { Link } from 'react-router-dom';
 
-
 const PrivateRouteExplanation = () => {
   return (
     <div>
@@ -20,7 +19,7 @@ const PrivateRouteExplanation = () => {
         {definitionOfPrivateRouteComponent}
       </SyntaxHighlighter>
 
-      <Link to='/routes/useparams'>
+      <Link to='/navigationTypes/navigate/1' className="button">
         Siguiente
       </Link>
     </div>

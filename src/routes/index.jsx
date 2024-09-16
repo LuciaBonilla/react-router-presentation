@@ -21,6 +21,8 @@ import UseSearchParams from "./Routes/UseSearchParams/index.jsx";
 import NavigateExplanation from "./NavigationTypes/Navigate/index.jsx";
 import LinkExplanation from "./NavigationTypes/Link/index.jsx";
 import NavLinkExplanation from "./NavigationTypes/NavLink/index.jsx";
+import UseNavigateExplanation from "./NavigationTypes/useNavigate/index.jsx";
+import UseLocationExplanation from "./NavigationTypes/UseLocation/index.jsx";
 
 export const BrowserRouter = createBrowserRouter([
   {
@@ -93,31 +95,47 @@ export const BrowserRouter = createBrowserRouter([
     children: [
       {
         path: 'navigate/:id',
-        element: <NavigateExplanation/>,
+        element: <NavigateExplanation />,
       },
       {
-        path:'navigate',
-        element: <NavigateExplanation/>,
+        path: 'navigate',
+        element: <NavigateExplanation />,
       },
       {
         path: 'link',
-        element: <LinkExplanation/>,
+        element: <LinkExplanation />,
       },
       {
         path: 'link/:id',
-        element: <LinkExplanation/>,
+        element: <LinkExplanation />,
       },
       {
         path: 'navLink',
-        element: <NavLinkExplanation/>,
+        element: <NavLinkExplanation />,
       },
       {
         path: 'navLink/:id',
-        element: <NavLinkExplanation/>
-      }
+        element: <NavLinkExplanation />,
+      },
+      {
+        path: 'useNavigate',
+        element: <UseNavigateExplanation />,
+      },
+      {
+        path: 'useLocation',
+        element: <UseLocationExplanation />,
+      },
+
     ]
   },
   {
+    path: 'thanks',
+    element: <h1>¡Gracias por su atención!
+      ¿Preguntas?
+    </h1>,
+
+  }, {
+
     path: "useParams",
     element: <UseParams />
   },

@@ -15,8 +15,8 @@ const useSearchParams = () => {
             <SyntaxHighlighter showLineNumbers language="jsx" style={dracula}>
                 {routestext}
             </SyntaxHighlighter>
-            <Link to='/start' className = "button"> 
-                Siguiente?
+            <Link to='/thanks' className = "button"> 
+                Siguiente
             </Link>
         </div>
     );

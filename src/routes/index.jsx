@@ -1,5 +1,6 @@
 import {
   createBrowserRouter,
+  Navigate,
 } from "react-router-dom";
 
 import App from './Home/App.jsx'
@@ -15,6 +16,9 @@ import FirstNestedView from "./Routes/NestedRoutes/first/index.jsx";
 import PrivateRoute from "./Routes/PrivateRoutes/index.jsx";
 import Login from "./Login/index.jsx";
 import PrivateRouteExplanation from "./Routes/PrivateRoutes/privateRouteExplanation.jsx";
+import NavigateExplanation from "./NavigationTypes/Navigate/index.jsx";
+import LinkExplanation from "./NavigationTypes/Link/index.jsx";
+import NavLinkExplanation from "./NavigationTypes/NavLink/index.jsx";
 
 export const BrowserRouter = createBrowserRouter([
   {
@@ -83,6 +87,33 @@ export const BrowserRouter = createBrowserRouter([
   },
   {
     path: '/navigationtypes',
-    element: <NavigationTypes />
-  }
+    element: <NavigationTypes />,
+    children: [
+      {
+        path: 'navigate/:id',
+        element: <NavigateExplanation/>,
+      },
+      {
+        path:'navigate',
+        element: <NavigateExplanation/>,
+      },
+      {
+        path: 'link',
+        element: <LinkExplanation/>,
+      },
+      {
+        path: 'link/:id',
+        element: <LinkExplanation/>,
+      },
+      {
+        path: 'navLink',
+        element: <NavLinkExplanation/>,
+      },
+      {
+        path: 'navLink/:id',
+        element: <NavLinkExplanation/>
+      }
+    ]
+  },
+  
 ])

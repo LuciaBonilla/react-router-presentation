@@ -19,8 +19,8 @@ const PrivateRouteExplanation = () => {
         {definitionOfPrivateRouteComponent}
       </SyntaxHighlighter>
 
-      <Link to='/'>
-        Ir a la ruta base
+      <Link to='/navigationTypes/navigate/1' className="button">
+        Siguiente
       </Link>
     </div>
   );

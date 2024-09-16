@@ -66,14 +66,15 @@ const UseNavigateExplanation = () => {
 
 export const useLocationCode = `
 const UseLocationExplanation = () => {
-    const location = useLocation();
+    const location = useLocation(); // Se inicializa el Hook useLocation
 
-  return (
-    <div>
-      <h1>Location Page</h1>
-      <p>Estás en la ruta: {location.pathname}</p>
-      <p>Estado actual: {JSON.stringify(location.state)}</p>
-    </div>
-  );
+    return (
+        <div>
+          <p>
+            La propiedad más común que se usa es <code>pathname</code>, que indica la ruta actual.
+            En este momento, estás en: <strong>{location.pathname}</strong>
+          </p>
+        </div>
+    );
 }
 `;

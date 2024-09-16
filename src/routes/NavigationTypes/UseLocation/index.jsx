@@ -34,4 +34,3 @@ const UseLocationExplanation = () => {
 }
 
 export default UseLocationExplanation;
-
